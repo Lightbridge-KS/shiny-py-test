@@ -20,11 +20,17 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             {"1": "Option 1", "2": "Option 2", "3": "Option 3"},  
     ) 
 
+    # ========================================================================
+
     ui.input_radio_buttons(  
             "radio_2",  
             "Radio buttons",  
             {"1": "Option 1", "2": "Option 2", "3": "Option 3"},  
     ) 
+
+    # ========================================================================
+
+    ui.input_numeric("numeric", "Numeric input", 1, min=1, max=10) 
 
     # ========================================================================
 
@@ -37,6 +43,12 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             "c": "C",  
         },  
     )  
+
+    # ========================================================================
+
+    @render.text
+    def output_debug():
+        return f"{input.numeric()} has {type(input.numeric())}"
 
     # ========================================================================
 

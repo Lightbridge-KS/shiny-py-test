@@ -13,4 +13,9 @@ ui.input_checkbox_group(
 
 @render.text
 def value():
-    return ", ".join(input.checkbox_group())
+    res = input.checkbox_group()
+    return f"""
+raw: {res}
+type (tuple): {type(res)}
+type (list): {list(res)}
+"""
