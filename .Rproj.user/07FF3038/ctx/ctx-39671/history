@@ -1,6 +1,0 @@
-from shiny import App, render, ui
-!ls
-!pip install shiny
-from shiny import App, render, ui
-python3 -m pip install jupyter
-!pip install jupyter
