@@ -43,6 +43,7 @@ def server(input: Inputs, output: Outputs, session: Session):
         
         if file_path.suffix.lower() == ".csv":
             return pd.read_csv(file_path)
+        
         elif file_path.suffix.lower() == ".xlsx":
             sheet_name = input.excel_sheet_select()
             if len(sheet_name) == 0:
